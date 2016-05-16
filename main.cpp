@@ -104,7 +104,7 @@ ii play_max(int p,int c ,int r ,int alpha ,int beta)
     {
         // reached a leaf
         next_move.first=  -1 ;
-        next_move.second = sc ;
+        next_move.second = sc * (10 - r) ;
         return next_move;
     }
     for(int i=0;i<9;i++)
@@ -131,7 +131,7 @@ ii play_min(int p,int c ,int r ,int alpha ,int beta)
     if(r==9 || sc!=0)
     {
         next_move.first =  -1 ;
-        next_move.second = sc ;
+        next_move.second = sc * (10 - r) ;
         return next_move;
     }
     for(int i=0;i<9;i++)
